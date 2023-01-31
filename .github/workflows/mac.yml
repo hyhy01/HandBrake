@@ -27,7 +27,7 @@ jobs:
 
     - name: Build HandBrake
       run: |
-        ./configure
+        ./configure --enable-fdk-aac
         cd build
         make ub && make pkg.create
 
