@@ -1,4 +1,4 @@
-__deps__ := BZIP2 ZLIB FDKAAC LIBDAV1D SVT-AV1 LIBVPX LAME LIBOPUS LIBSPEEX XZ ZIMG
+__deps__ := BZIP2 ZLIB FDKAAC LIBDAV1D SVT-AV1 LIBVPX LAME X264 X265 LIBASS LIBOPUS LIBSPEEX XZ ZIMG
 ifeq (1,$(FEATURE.qsv))
 __deps__ += LIBVPL
 endif
@@ -48,6 +48,9 @@ FFMPEG.CONFIGURE.extra = \
     --enable-encoder=libmp3lame \
     --enable-libopus \
     --enable-encoder=libopus \
+    --enable-libx264 \
+    --enable-libx265 \
+    --enable-libass --enable-filter=subtitles \
     --enable-libspeex \
     --disable-encoder=libspeex \
     --enable-decoder=libspeex \
