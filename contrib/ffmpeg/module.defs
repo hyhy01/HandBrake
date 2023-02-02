@@ -47,7 +47,6 @@ FFMPEG.CONFIGURE.extra = \
     --enable-encoder=libopus \
     --enable-libx264 \
     --enable-libx265 \
-
     --enable-libspeex \
     --disable-encoder=libspeex \
     --enable-decoder=libspeex \
