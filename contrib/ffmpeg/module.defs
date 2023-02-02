@@ -1,4 +1,4 @@
-__deps__ := BZIP2 ZLIB FDKAAC LIBDAV1D SVT-AV1 LIBVPX LAME X264 X265 LIBASS LIBOPUS LIBSPEEX XZ ZIMG
+__deps__ := BZIP2 ZLIB FDKAAC LIBDAV1D SVT-AV1 LIBVPX LAME X264 X265 LIBOPUS LIBSPEEX XZ ZIMG
 ifeq (1,$(FEATURE.qsv))
 __deps__ += LIBVPL
 endif
@@ -26,7 +26,7 @@ ifneq (,$(filter $(HOST.system),freebsd netbsd openbsd))
 	FFMPEG.CONFIGURE.env += CFLAGS=-I$(LOCALBASE)/include
 	FFMPEG.CONFIGURE.env += LDFLAGS=-L$(LOCALBASE)/lib
 endif
-
+##    --enable-libass --enable-filter=subtitles \
 FFMPEG.CONFIGURE.extra = \
     --enable-gpl \
     --disable-doc \
@@ -47,7 +47,7 @@ FFMPEG.CONFIGURE.extra = \
     --enable-encoder=libopus \
     --enable-libx264 \
     --enable-libx265 \
-    --enable-libass --enable-filter=subtitles \
+
     --enable-libspeex \
     --disable-encoder=libspeex \
     --enable-decoder=libspeex \
