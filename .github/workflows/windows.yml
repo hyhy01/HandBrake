@@ -58,7 +58,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ffmpeg
-        path: ./build/contrib/ffmpeg/ffmpeg-5.1.2/ffmpeg.exe
+        path: ./build/contrib/bin/ffmpeg.exe
 
   build_gui:
     name: Windows UI

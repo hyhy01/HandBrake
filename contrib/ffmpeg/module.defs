@@ -26,7 +26,7 @@ ifneq (,$(filter $(HOST.system),freebsd netbsd openbsd))
 	FFMPEG.CONFIGURE.env += CFLAGS=-I$(LOCALBASE)/include
 	FFMPEG.CONFIGURE.env += LDFLAGS=-L$(LOCALBASE)/lib
 endif
-##    --enable-libass --enable-filter=subtitles \
+##    --enable-libass --enable-filter=subtitles 
 FFMPEG.CONFIGURE.extra = \
     --enable-gpl \
     --disable-doc \
