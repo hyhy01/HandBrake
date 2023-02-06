@@ -52,3 +52,8 @@ jobs:
       with:
         name: LibHandBrake
         path: ./build/libhb/hb.dll
+    - name: Upload FFmpeg
+      uses: actions/upload-artifact@v3
+      with:
+        name: ffmpeg
+        path: ./build/contrib/bin/ffmpeg.exe
