@@ -36,3 +36,8 @@ jobs:
       with:
         name: HandBrake-macos
         path: ./build/pkg
+    - name: Upload FFmpeg
+      uses: actions/upload-artifact@v3
+      with:
+        name: ffmpeg
+        path: ./build/contrib/bin/ffmpeg
